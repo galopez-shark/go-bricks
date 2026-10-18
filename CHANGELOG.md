@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.73.0](https://github.com/gaborage/go-bricks/compare/v0.72.0...v0.73.0) (2026-10-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **messaging:** give each App its own seal runtime ([#2157](https://github.com/gaborage/go-bricks/issues/2157))
+* **migration:** run a type-less tenant with the runner's vendor ([#2153](https://github.com/gaborage/go-bricks/issues/2153))
+
+### Fixed
+
+* **logger:** stop Err panicking on a typed-nil pointer error ([#2152](https://github.com/gaborage/go-bricks/issues/2152)) ([9fb6203](https://github.com/gaborage/go-bricks/commit/9fb6203f614e502f31945a8faf0ddd1766be757b))
+* **messaging:** bind AMQP close notifications instead of dropping them ([#2135](https://github.com/gaborage/go-bricks/issues/2135)) ([678166d](https://github.com/gaborage/go-bricks/commit/678166d4e3e8c81756cd78825a974c92dbe6bf14))
+* **messaging:** bind seal instruments into each sealer and opener ([#2156](https://github.com/gaborage/go-bricks/issues/2156)) ([3cf2f97](https://github.com/gaborage/go-bricks/commit/3cf2f970dbcffc79519f4ff65207f452015f09ee))
+* **messaging:** bind the AMQP meter before reading lifecycle counters ([#2148](https://github.com/gaborage/go-bricks/issues/2148)) ([5f6f520](https://github.com/gaborage/go-bricks/commit/5f6f520413537d3fddc2d66abd26bd55701b3e97))
+* **messaging:** give each App its own seal runtime ([#2157](https://github.com/gaborage/go-bricks/issues/2157)) ([babe12d](https://github.com/gaborage/go-bricks/commit/babe12d6160ef9a69aaa57e9216de7b8cfc87e98))
+* **messaging:** pace the redial after an AMQP connection close ([#2154](https://github.com/gaborage/go-bricks/issues/2154)) ([4a9bbb0](https://github.com/gaborage/go-bricks/commit/4a9bbb0b23254d8e51dc9d19c044d5cc07c3d269))
+* **migration:** run a type-less tenant with the runner's vendor ([#2153](https://github.com/gaborage/go-bricks/issues/2153)) ([4f6f8c0](https://github.com/gaborage/go-bricks/commit/4f6f8c03f803ebb77d45842969497b7abcc8f635))
+* **server:** default server.timeout.idle to 75s, above the ALB's 60s ([#2149](https://github.com/gaborage/go-bricks/issues/2149)) ([c1113c7](https://github.com/gaborage/go-bricks/commit/c1113c7f7d47b9e531c7cd0a938ee4bc4d8e6fcd))
+* **streams:** adopt stream client v1.9.0 and own reconnect backoff ([#2140](https://github.com/gaborage/go-bricks/issues/2140)) ([8a99a20](https://github.com/gaborage/go-bricks/commit/8a99a206d52a5e36ab1861e8cedda22abb30c8cb))
+
+
+### Changed
+
+* **streams:** defer stream re-creation and drop the reattach seam ([#2150](https://github.com/gaborage/go-bricks/issues/2150)) ([a82e882](https://github.com/gaborage/go-bricks/commit/a82e882031327262c8694460d650028b58f4c0f9))
+
 ## [0.72.0](https://github.com/gaborage/go-bricks/compare/v0.71.1...v0.72.0) (2026-10-15)
 
 
